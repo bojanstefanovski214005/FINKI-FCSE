@@ -1,0 +1,156 @@
+a.
+for $artist in doc("ARTISTS.xml")
+let $albums := 
+    for $album in doc("ALBUMS.xml")
+    where $album/@ARTIST_ID = $artist/@ID
+    return 
+        <Album>
+            <Title>{ $album/NAME/text() }</Title>
+            <ReleaseYear>{ $album/RELEASE_YEAR/text() }</ReleaseYear>
+        </Album>
+return 
+<ArtistInfo>
+    { $artist/* }
+    <Albums>{ $albums }</Albums>
+</ArtistInfo>
+
+
+
+b.
+for $client in doc("Clients.xml")
+let $rents := doc("Rent.xml")//RENT[@CLIENT_ID = $client/@ID]
+let $count := count($rents)
+order by $count descending
+return <Client>
+         {$client/NAME}
+         {$client/SURNAME}
+         <Rents>{$count}</Rents>
+       </Client>
+
+
+
+c.
+for $album in doc("Albums.xml")
+let $cds := doc("CatalogCD.xml")
+let $rents := 
+  for $cd in $cds
+  for $rent in doc("Rent.xml")  let $date := xs:date(substring($rent/FROM_DATE, 7, 4) || "-" || substring($rent/FROM_DATE, 1, 2) || "-" || substring($rent/FROM_DATE, 4, 2))
+  where $date ge xs:date("2020-01-01") and $date le xs:date("2020-03-31")
+  return $rent
+where count($rents) >= 3
+return $album
+
+
+
+d.
+let $albums := doc("Albums.xml")
+let $albumRents := 
+  for $album in $albums
+  let $cds := doc("CatalogCD.xml")
+  let $rents := 
+    for $cd in $cds
+    return doc("Rent.xml")
+  return <AlbumInfo>
+           <Album>{$album}</Album>
+           <RentCount>{count($rents)}</RentCount>
+           <Rents>{$rents}</Rents>
+         </AlbumInfo>
+let $topAlbum := $albumRents[RentCount = max($albumRents/RentCount)]
+let $rents := $topAlbum/Rents/RENT
+let $topClientId := (
+  for $r in $rents
+  group by $cid := $r/@CLIENT_ID
+  let $count := count($r)
+  order by $count descending
+  return <TopClient ID="{$cid}" Count="{$count}"/>
+)[1]/@ID
+return
+  <TopClientWithAlbum>
+    {doc("Clients.xml")
+    {$topAlbum/Album}
+  </TopClientWithAlbum>
+
+
+
+e.
+for $album in doc("Albums.xml")
+let $cds := doc("CatalogCD.xml")
+let $rents := 
+  for $cd in $cds
+  return doc("Rent.xml")
+let $avg := if (count($cds) > 0) then count($rents) div count($cds) else 0
+return <AlbumAverageRent>
+         <AlbumName>{$album/NAME/text()}</AlbumName>
+         <AverageRents>{format-number($avg, '#.##')}</AverageRents>
+       </AlbumAverageRent>
+
+
+
+f.
+for $album in doc("Albums.xml")
+let $cds := doc("CatalogCD.xml")
+let $rents := 
+  for $cd in $cds
+  return doc("Rent.xml")
+let $price := xs:decimal(replace($album/PRICE, '[$]', ''))
+let $profit := count($rents) * $price
+return <AlbumProfit>
+         <AlbumName>{$album/NAME/text()}</AlbumName>
+         <Profit>{format-number($profit, '#.##')}</Profit>
+       </AlbumProfit>
+
+
+
+g.
+let $albums := doc("Albums.xml")
+let $albumStats :=
+  for $album in $albums
+  let $cds := doc("CatalogCD.xml")
+  let $rents := for $cd in $cds return doc("Rent.xml")
+  let $hasFreeCD := some $cd in $cds satisfies ($cd/OCCUPIED = "0" or $cd/OCCUPIED = "free")
+  where $hasFreeCD
+  return <AlbumStat>
+           <Album>{$album}</Album>
+           <RentCount>{count($rents)}</RentCount>
+         </AlbumStat>
+let $maxRented := $albumStats[RentCount = max($albumStats/RentCount)][1]/Album
+let $artistId := $maxRented/@ARTIST_ID
+let $group := doc("Groups.xml")
+return
+  <GroupMostRentedAlbum>
+    {$group}
+    {$maxRented}
+  </GroupMostRentedAlbum>
+
+
+
+
+
+
+h.
+
+
+
+i.
+for $client in doc("Clients.xml")
+let $clientId := $client/@ID
+let $rents := doc("Rent.xml")
+let $albumCounts := 
+  for $rent in $rents
+  let $cd := doc("CatalogCD.xml")
+  let $album := doc("Albums.xml")
+  group by $aid := $album/@ARTIST_ID
+  return <Count ARTIST_ID="{$aid}" Num="{count($album)}"/>
+let $fav := $albumCounts[Num = max($albumCounts/@Num)][1]/@ARTIST_ID
+let $artist := doc("Artists.xml")
+return <ClientFavoriteArtist>
+         {$client}
+         {$artist}
+       </ClientFavoriteArtist>
+
+
+j.
+
+
+k.
+

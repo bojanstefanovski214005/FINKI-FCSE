@@ -1,0 +1,54 @@
+Person(name, age, gender)       // клуч е name
+Frequents(name, pizzeria)       // клуч е [name, pizzeria]
+Eats(name, pizza)               // клуч е [name, pizza]
+Serves(pizzeria, pizza, price)  // клуч е [pizzeria, pizza]
+
+
+π pizza σ (gender='female' ∧ age > 20)(Person ⨝ Eats)
+
+π name σ (gender='female' ∧ pizzeria='Straw Hat')(Person ⨝ Eats ⨝ Serves)
+
+π pizzeria σ ((name='Amy' or name='Fay') and  price<10)(Serves ⨝ Person ⨝ Eats)
+
+π pizzeria σ ((name='Amy' or name='Fay') and  price>10)(Serves ⨝ Person ⨝ Eats)
+
+A = π pizzeria σ (name='Amy' and  price<10)(Serves ⨝ Person ⨝ Eats)
+B = π pizzeria σ (name='Fay' and  price<10)(Serves ⨝ Person ⨝ Eats)
+A ∩ B
+
+A = π pizza σ pizzeria='Dominos' (Serves)
+B = π name (Eats ⨝ A)
+C = π name (σ pizzeria='Dominos' (Frequents))
+B - C
+
+π pizza (σ age<24 or price<11 (Person ⨝ Serves))
+
+A = π age (σ pizza='mushroom' (Person ⨝ Eats))
+B = γ max(age)→age(A)
+B
+
+π pizzeria (σ age>30 (Serves ⨝ Person))
+
+π pizzeria (σ age<18 (Person ⨝ Frequents))
+
+π name (σ (gender='female' and (pizza='mushroom' or pizza='pepperoni')) (Person ⨝ Eats))
+
+A = π name (σ (gender='female' and pizza='mushroom') (Person ⨝ Eats))
+B = π name (σ (gender='female' and pizza='pepperoni') (Person ⨝ Eats))
+A ∩ B
+
+π pizzeria σ (price<10 and name='Amy') (Eats ⨝ Serves)
+
+A = π pizzeria (σ gender='male'(Frequents ⨝ Person))
+B = π pizzeria (σ gender='female'(Frequents ⨝ Person))
+C = A - B
+D = B - A
+C ∪ D
+
+A = π name, pizza (Eats ⨝ Frequents)
+B = π name, pizza (Eats ⨝ Frequents ⨝ Serves)
+A - B
+
+A = (π name(Person))
+B = (π name(((π name,pizzeria((Person) ⨝ Frequents))-(π name,pizzeria((Person) ⨝ Eats ⨝ Serves)))))
+A - B

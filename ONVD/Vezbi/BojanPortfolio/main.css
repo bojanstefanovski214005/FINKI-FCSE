@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700;800&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css";
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #3AAFA9 !important;
+}
+
+.navbar{
+    background-color: #3AAFA9 !important;
+}
+
+.active{
+    box-shadow: 2px 9px 43px -12px rgba(0,0,0,0.17);
+    -webkit-box-shadow: 2px 9px 43px -12px rgba(0,0,0,0.17);
+    -moz-box-shadow: 2px 9px 43px -12px rgba(0,0,0,0.17);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.navbar-dark.navbar-dark .navbar-nav .nav-link{
+    color: white !important;
+    font-size: 16px;
+    font-family: 'Sora', sans-serif;
+}
+
+.navbar-dark.navbar-dark .navbar-nav .nav-link:hover{
+    color: #17242A !important;
+    transition: ease-in-out 0.3s;
+}
+
+.navbar-brand > img {
+    width: 100px;
+    padding-top: 12px;
+}
+
+.navbar-nav li {
+    padding-right: 15px;
+}
+
+.nav-link > button {
+    margin-top: -7px;
+    width: 130px;
+}
+
+#first {
+    background-color: #3AAFA9 !important;
+}
+
+.helo{
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.name{
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.name > span {
+    color: #17242A;
+}
+
+.role{
+    color: #17242A;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    position: relative;
+    width: 290px;
+    border-right: 2px solid #17242A;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.animwr{
+    animation: animate 4s steps(24) 0.2s infinite normal both,
+    blinkCursor 800ms steps(14) infinite normal;
+}
+
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    40%{
+        width: 290px;
+    }
+    60%{
+        width: 290px;
+    }
+    100%{
+        width: 0;
+    }
+
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: #17242A;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.headerimg{
+    width: 280px;
+    animation-name: headerimage !important;
+    animation: ease-in-out 1.5s infinite;
+}
+
+#second{
+    background-color: #DEF2F1;
+}
+
+.titlesecond{
+    color: #17242A;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.parsecond {
+    color: #17242A;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+}
+
+#edumobile{
+    display: none;
+}
+
+.card-body{
+    background-color: #17242A;
+    border-radius: 7px;
+    transition: ease-in-out 0.4s;
+    border-width: 3.5px !important;
+    border-color: #17242A !important;
+    border-style: solid !important;
+}
+
+.card-body:hover{
+    background-color: #DEF2F1;
+    border-radius: 7px !important;
+}
+
+.card-body:hover .school{
+    color: #17242A;
+}
+
+.card-body:hover .schoolname{
+    color: #17242A;
+}
+
+
+
+.card-deck .card{
+    border-radius: 7px !important;
+}
+
+
+
+.school{
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.schoolname{
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    height: 80px;
+}
+
+.year{
+    color: #3AAFA9;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.cardline{
+    background-color: #2b7a78;
+    height: 2px;
+    border-radius: 5px;
+    width: 75%;
+}
+
+.swiper-button-next{
+    color: #2b7a78;
+}
+
+.swiper-button-prev{
+    color: #2b7a78;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #2b7a78 !important;
+}
+
+.swiper-pagination-bullet{
+    background-color: #2b7a78;
+}
+
+:root{
+    --swiper-navigation-size: 20px !important;
+}
+
+
+#skills h1{
+    text-align: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+
+#skills{
+    height: 700px;
+    background-color: white;
+}
+
+#skills h2{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-left: 100px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.titleskills{
+    color: #17242A !important;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.skillname{
+    color: #17242A !important;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.skilovi{
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.progress-bar{
+    background-color: #2b7a78 !important;
+}
+
+.animationbar {
+    animation-name: animbar !important;
+    animation-duration: 2s !important;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #17242A !important;
+    color: white  !important;
+}
+
+.btn-outline-secondary {
+    color: #17242A !important;
+    border-color: #17242A !important;
+    border-width: 2px !important;
+    width: 135px !important;
+}
+
+.hire{
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+.navbar-dark .navbar-toggler{
+    border-width: 0px !important;
+}
+
+#fifth{
+    background-color: #17242A;
+    background-image: url(images/backgfifth.png);
+    background-repeat: repeat;
+    background-size: 8%;
+}
+
+.titlefifth{
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+
+.parfifth {
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+}
+
+.project > a > img {
+    width: 300px;
+}
+
+.btn-light{
+    color: #17242A !important;
+    font-weight: 400 !important;
+    font-family: 'Sora';
+}
+
+#getin{
+    background-color: #17242A;
+    background-image: url(images/backget.png);
+    background-repeat: repeat-x;
+    background-size: 8%;
+}
+
+.getint{
+    color: white;
+    font-family: 'Sora' !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    border-width: 3px !important;
+    border-radius: 20px !important;
+    padding-top: 19px !important;
+    animation-name: headerimage !important;
+    animation: ease-in-out 1.5s infinite;
+}
+
+#fotr{
+    background-color: #DEF2F1;
+}
+
+.folw{
+    color: #3AAFA9;
+    font-family: 'Sora';
+    font-weight: 800;
+}
+
+ul{
+    list-style: none;
+}
+
+.ftr li{
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.fa{
+    font-size: 32px !important;
+    color: #3AAFA9;
+}
+
+.fa:hover{
+    color: #2b7a78;
+}
+
+.cpr{
+    color: #3AAFA9;
+    font-family: 'Sora';
+}
+
+.cpr > a {
+    color: #3AAFA9;
+    text-decoration: none;
+}
+
+.cpr > a:hover {
+    text-decoration: none;
+}
+
+
+@keyframes animbar {
+    from {width: 0%;}
+    to {}
+  }
+
+@keyframes headerimage {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(105%);
+     }
+    100% {
+        transform: scale(100%);
+     }
+    }
+
+/* Mobile */
+
+@media only screen and (max-width: 768px){
+    .role{
+        font-size: 25px;
+    }
+    #edu{
+        display: none;
+    }
+
+    #edumobile{
+        display: block;
+    }
+
+    .nav-item{
+        text-align: center;
+    }
+
+    .ftr li{
+        display: inline-block;
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+
+    #getin{
+        background-size: 28%;
+    }
+
+    #fifth{
+        background-size: 28%;
+    }
+
+    #preloader{
+        background-size: 60% !important;
+    }
+}
+
+#preloader {
+    background-color: #17242A;
+    background-image: url(images/prepre.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    opacity: 1;
+    z-index: 100;
+    transition: 0.7s;
+    visibility: visible;
+}
+
+#preloader.hidden{
+    height: 0vh;
+    opacity: 1;
+    visibility: hidden;
+}

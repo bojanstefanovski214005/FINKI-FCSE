@@ -1,0 +1,20 @@
+<SYSTEM>{
+  for $artist in doc("Artists.xml")//ARTIST
+  let $artistID := $artist/@ID
+  let $albums := doc("Albums.xml")//ALBUM[@ARTIST_ID = $artistID]
+  return
+    <ARTIST>
+      <ID>{$artist/@ID}</ID>
+      <NAME>{$artist/NAME}</NAME>
+      <COUNTRY>{$artist/COUNTRY}</COUNTRY>
+      <GENRE>{$artist/GENRE}</GENRE>
+      <ALBUMS>{
+        for $album in $albums
+        return
+          <ALBUM>
+            <NAME>{$album/NAME}</NAME>
+            <RELEASE_YEAR>{$album/RELEASE_YEAR}</RELEASE_YEAR>
+          </ALBUM>
+      }</ALBUMS>
+    </ARTIST>
+}</SYSTEM>

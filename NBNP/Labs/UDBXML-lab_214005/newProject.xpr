@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <meta>
+        <filters directoryPatterns="" filePatterns="\QnewProject.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options>
+            <serialized xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
+    </meta>
+    <projectTree name="newProject.xpr">
+        <folder path="."/>
+        <file name="../../../Downloads/UDBXML-lab/Albums.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/Artists.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/CatalogCD.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/Clients.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/DJ.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/Groups.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/Rent.xml"/>
+        <file name="../../../Downloads/UDBXML-lab/Schema.xsd"/>
+        <file name="../../../Downloads/UDBXML-lab/Singers.xml"/>
+    </projectTree>
+</project>

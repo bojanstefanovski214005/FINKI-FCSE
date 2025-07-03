@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca2</title>
+</head>
+<body>
+<script >
+    function operator(string){
+        let brojb = parseInt(string);
+        if(brojb === 70){
+            return "T-mobile"
+        }
+        if(brojb === 71){
+            return "T-mobile"
+        }
+        if(brojb === 72){
+            return "T-mobile"
+        }
+        if(brojb === 75){
+            return "One"
+        }
+        if(brojb === 76){
+            return "One"
+        }
+        if(brojb === 77){
+            return "VIP"
+        }
+        if(brojb === 78){
+            return "VIP"
+        }
+
+    }
+
+    let broj = prompt("Vnesi telefonski broj");
+    let broj1 = broj.slice(0,2)
+    let broj2 = broj.slice(2,5)
+    let broj3 = broj.slice(5,8)
+    document.write("0" + broj1 +"/" +broj2 +"-" + broj3 +" - " + operator(broj1))
+
+
+</script>
+
+</body>
+</html>

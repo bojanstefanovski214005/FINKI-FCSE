@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <script !src="">
+    function set(){
+      document.getElementsByTagName("body")[0].style.fontFamily = "Arial";
+      const li = document.getElementsByTagName("li");
+      for (var i = 0; i < li.length; i++){
+        li[i].style.backgroundColor = "red"
+      }
+
+      document.getElementById("name").innerHTML = "Bojan"
+      document.getElementById("index").innerHTML = "214005"
+      document.getElementById("name").innerHTML = "Bitola"
+
+
+
+    }
+  </script>
+</head>
+<body>
+<h1>About Me</h1>
+<ul>
+  <li>Name: <span id="name"></span>
+  <li>Index: <span id="index"></span>
+  <li>Hometown: <span id="hometown"></span>
+</ul>
+<input type="button" onclick="set()" value="Set"><br></form>
+
+</body>
+</html>

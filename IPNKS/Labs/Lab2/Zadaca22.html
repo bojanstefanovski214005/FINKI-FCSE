@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset=utf-8 />
+  <title>Zadaca 22</title>
+  <script !src="">
+    function randomImage(){
+      var slika = document.getElementById("slika")
+      var broj = Math.floor(Math.random() * 2);
+      if (broj === 0){
+        slika.src = "http://data.whicdn.com/images/15145864/large.jpg"
+      }
+      if (broj === 1){
+        slika.src = "https://cdn0.vox-cdn.com/uploads/chorus_image/image/48151611/8559004265_4b81d299ce.0.0.jpg"
+      }
+      if (broj === 2){
+        slika.src = "https://farm5.staticflickr.com/4060/4567292488_5d3f4b05f6_z.jpg"
+        console.log("2")
+      }
+    }
+  </script>
+</head>
+<body><form>
+
+  <input type="button" onclick="randomImage()" value="Random Image"><br></form>
+<img id="slika" src="" alt="">
+</body>
+</html>

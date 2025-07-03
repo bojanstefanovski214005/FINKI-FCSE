@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca4</title>
+</head>
+<body>
+<script !src="">
+  let broevi = prompt()
+  let broeviniza = broevi.split("")
+  flag = 0;
+  for (let i = 1; i < broeviniza.length; i++){
+      if (!isNaN(broeviniza[i])){
+          if (broeviniza[i-1] === '-'){
+              flag = 1
+              break
+          }
+      }
+  }
+
+  if (flag == 0) {
+      document.write("Знакот е +")
+  }
+  else if (flag==1){
+      document.write("Знакот е -")
+  }
+</script>
+
+
+</body>
+</html>

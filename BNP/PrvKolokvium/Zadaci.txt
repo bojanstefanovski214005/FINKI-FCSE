@@ -1,0 +1,34 @@
+Muzej(shifra, ime_muzej, opis, grad, tip, rabotno_vreme)
+Izlozba(ime_i, opis, sprat, prostorija, datum_od, datum_do, shifra_muzej*)
+Izlozba_TD(ime_i*) 
+Izlozba_TD_ime(ime_i*, ime_td)
+Izlozba_UD(ime_i*)
+Umetnicko_delo(shifra, ime, godina, umetnik)
+Izlozeni(shifra_d*, ime_i*, datum_pocetok, datum_kraj)
+
+
+MuzejOtvoreno <- σtip='otvoreno'(Muzej)
+IzlozbiOtvoreni=πime_i(MuzejOtvoreno ⨝ MuzejOtvoreno.shifra = Izlozba.shifra_muzej Izlozba)
+Izlozeni1=πshifra_d(Izlozeni ⨝ IzlozbiOtvoreni)
+UmetniciDelaIzlozeni = πshifra_d(Umetnicko_delo ⨝ Umetnicko_delo.shifra = Izlozeni.shifra_d Izlozeni1)
+σ1=1(UmetniciDelaIzlozeni)
+
+MuzejOtvoreni = σtip='otvoreno'(Muzej)
+IzlozbiOtvoreni = (MuzejOtvoreni ⨝ Muzej.shifra = Izlozba.shifra_muzej Izlozba)
+UmetnickiIzlozeni = π shifra_d(Izlozeni)
+Neizlozeni = π shifra (Umetnicko_delo) - π shifra_d(Izlozeni ⨝ IzlozbiOtvoreni) 
+σ(1=1)Neizlozeni
+
+MuzejOtvoreni ← σtip='otvoreno'(Muzej)
+IzlozbiOtvoreni = (MuzejOtvoreni ⨝ MuzejOtvoreni.shifra = Izlozba.shifra_muzej Izlozba)
+Neizlozeni← πshifra(Umetnicko_delo) - πshifra_d(Izlozeni ⨝ IzlozbiOtvoreni) 
+DelaInfo←σ1=1(Neizlozeni⨝Umetnicko_delo)
+σ(1=1)(DelaInfo)
+
+σ umetnik='Pablo Picasso' (Izlozeni ⨝ shifra = shifra_d Umetnicko_delo)
+
+γ ime_i; count(shifra)->dela(σ umetnik='Pablo Picasso' (Izlozeni ⨝ shifra = shifra_d Umetnicko_delo))
+
+A = σ umetnik='Pablo Picasso'(Umetnicko_delo)
+B = γ ime_i; count(shifra_d)->izbroeni(A)
+B ⨝ Izlozeni.ime_i = Izlozba.ime_i Izlozba

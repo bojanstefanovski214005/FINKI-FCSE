@@ -1,0 +1,121 @@
+html{
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+}
+
+.bar{
+    background-image: url("img/navigation-background.jpg");
+    background-repeat: repeat-x;
+    background-position-y: center;
+    height: 120px;
+    width: 100%;
+    padding: 4px;
+}
+
+.bar img{
+    height: 120px;
+    float: left;
+}
+
+.meni li{
+    float: left;
+    display: inline-block;
+    position: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+
+.meni{
+    float: left;
+    margin-top: 50px;
+    color: white;
+    font-size: 18px;
+
+}
+
+.meni a{
+    color: white;
+    text-decoration: none;
+}
+
+#middle{
+    height: 420px;
+}
+
+.leva{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.desna{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.leva h1{
+    color: #92CD00;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.leva p{
+    color: #192402;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.desna img{
+    width: 395px;
+    margin-left: 5px;
+}
+
+footer{
+    display: block;
+    height: 30px;
+    background-color: #81b518;
+}
+
+footer h4{
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.serv li{
+    margin-top: 5px;
+}
+
+.leva1{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+
+.leva1 h1{
+    color: #92CD00;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.leva1 p{
+    color: #192402;
+    margin: 0px;
+}
+
+p > a {
+    color: #192402;
+}
+
+.tab{
+    background: yellow;
+}

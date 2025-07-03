@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca 34</title>
+    <script !src="">
+        function Book(title, author,  alreadyRead) {
+            this.title = title;
+            this.author = author;
+            this.alreadyRead = alreadyRead;
+            this.print = function() {
+                if (alreadyRead === true)
+                return "You have read " + this.title + " by " + this.author
+            else
+            return "You have not read " + this.title + " by " + this.author
+            }
+
+        }
+        const books = [3];
+        books[0] = new Book("The Hobbit", "J.R.R. Tolkien", true);
+        books[1] = new Book("The Lord of the Rings", "J.R.R. Tolkien", false);
+        books[2] = new Book("Hamlet", "Shekspir", false);
+        books[3] = new Book("Otelo", "Shekspir", false);
+
+
+        for (let i = 0 ; i < books.length; i++){
+            console.log(books[i].print())
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

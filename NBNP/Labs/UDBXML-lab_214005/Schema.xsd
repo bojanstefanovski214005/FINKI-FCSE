@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <!-- Osnovni tipovi -->
+    <xs:simpleType name="OccupiedType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="functional"/>
+            <xs:enumeration value="slightly damaged"/>
+            <xs:enumeration value="damaged"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="PhoneType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="75[0-9]-[1-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="AddressFormatted">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z\s]+St\.\d{1,2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Tip Adresa -->
+    <xs:complexType name="AddressType">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="street" type="xs:string"/>
+                <xs:element name="number" type="xs:string"/>
+            </xs:sequence>
+            <xs:element name="formatted" type="AddressFormatted"/>
+        </xs:choice>
+    </xs:complexType>
+    
+    <!-- Klient -->
+    <xs:complexType name="ClientType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="surname" type="xs:string"/>
+            <xs:element name="address" type="AddressType" minOccurs="0"/>
+            <xs:element name="email" type="EmailType"/>
+            <xs:element name="phone" type="PhoneType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Artist + Specijalizacija -->
+    <xs:complexType name="ArtistType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+            <xs:choice>
+                <xs:element name="DJ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="yearOfBirth" type="xs:gYear"/>
+                            <xs:element name="netWorth" type="xs:decimal"/>
+                            <xs:element name="yearStartedPerforming" type="xs:gYear"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Singer">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="yearOfBirth" type="xs:gYear"/>
+                            <xs:element name="yearStartedPerforming" type="xs:gYear"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Group">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="yearFormed" type="xs:gYear"/>
+                            <xs:element name="numberOfMembers" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- System -->
+    <xs:element name="System">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Clients">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Client" type="ClientType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Artists">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Artist" type="ArtistType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca31</title>
+    <script !src="">
+        let list = ["a","b","f","g","b","f","d"];
+
+        function duplikati(lista) {
+            let uniqueChars = [];
+            lista.forEach((c) => {
+                if (!uniqueChars.includes(c)) {
+                    uniqueChars.push(c);
+                }
+            });
+
+            console.log(uniqueChars);
+        }
+    </script>
+</head>
+<body>
+<button onclick="duplikati(list)" type="submit">Click</button>
+</body>
+</html>

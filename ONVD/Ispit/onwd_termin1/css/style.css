@@ -1,0 +1,363 @@
+/* 214005 - Бојан Стефановски */
+
+/* Со среќа! */
+/* Good Luck! */
+html{
+    margin: 0px;
+}
+body{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#cssmenu{
+    background-color: black;
+    width: 100%;
+    height: 40px;
+
+}
+
+#cssmenu ul{
+    padding-top: 10px;
+    vertical-align: center;
+}
+
+#cssmenu ul li{
+    display: inline-block;
+    padding-right: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+#cssmenu ul li:hover{
+    display: inline-block;
+    padding-right: 25px;
+    text-decoration: none;
+    color: white;
+    background-color: dodgerblue;
+}
+
+#cssmenu ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header-banner.threegrid > .row{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 500px;
+}
+
+.col-2-3{
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header-banner.threegrid > .row > .col-1-3{
+    background-color: dodgerblue;
+    padding-left: 15px;
+}
+
+.header-text > h1{
+    text-transform: uppercase;
+    color: white;
+}
+
+.header-text > p{
+    color: white;
+}
+
+.content-box.boxstyle-1.box-1 > .threegrid{
+    background-color: #333333;
+    height: 350px;
+}
+
+.content-box.boxstyle-1.box-1 > .threegrid > .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.content-box.boxstyle-1.box-1 > .threegrid > .row div:nth-child(2) {
+    background-image: url("../images/main.jpg");
+    background-size: 70%;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+
+.content-box.boxstyle-1.box-1 > .threegrid > .row div:nth-child(1) > .wrap-col > .row > p {
+    color: white;
+    font-size: 14px;
+}
+
+.content-box.box-2 > .threegrid > .row {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    display: flex;
+}
+
+.content-box.box-2 > .threegrid > .row > .col-1-4:nth-child(1) > .wrap-col > .box-item > .zoom-container{
+    background-image: url("../images/feature-icon-1.png");
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content-box.box-2 > .threegrid > .row > .col-1-4:nth-child(2) > .wrap-col > .box-item > .zoom-container{
+    background-image: url("../images/feature-icon-2.png");
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.content-box.box-2 > .threegrid > .row > .col-1-4:nth-child(3) > .wrap-col > .box-item > .zoom-container{
+    background-image: url("../images/feature-icon-3.png");
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.content-box.box-2 > .threegrid > .row > .col-1-4:nth-child(4) > .wrap-col > .box-item > .zoom-container{
+    background-image: url("../images/feature-icon-4.png");
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+.content-box.box-2 > .threegrid > .row > .col-1-4 > .wrap-col > .box-item > .box-item-content{
+    text-align: center;
+}
+
+.content-box.box-2 > .threegrid > .row > .col-1-4 > .wrap-col > .box-item > .box-item-content > h3 > a{
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    display: grid;
+    grid-template-rows: 100px 450px;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid{
+    background-image: url("../images/transparent-back-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 580px;
+}
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .header {
+    margin-top: 30px;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .header > .wrapper > .intro{
+    color: dimgrey;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .header > .wrapper > .color-yellow{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .header > .wrapper > .line{
+    height: 4px;
+    background-color: dimgrey;
+    width: 80px;
+    float: left;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row {
+    display: flex;
+    margin-top: 40px;
+
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4 > .wrap-col > .box-item > .box-item-content {
+    padding: 0px 15px 0px 15px;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4 > .wrap-col > .box-item > .box-item-content > a {
+    text-decoration: none;
+    color: dodgerblue;
+    text-transform: uppercase;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4 > .wrap-col > .box-item > .box-item-content > h4 {
+    font-weight: bold;
+    width: 120px;
+    font-family: sans-serif;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4 > .wrap-col > .box-item > .box-item-content > p {
+    color: dimgrey;
+}
+
+
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4:nth-child(1) > .wrap-col > .box-item > .zoom-container {
+    background-image: url("../images/kids2-thumb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 133px;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4:nth-child(2) > .wrap-col > .box-item > .zoom-container {
+    background-image: url("../images/kids3-thumb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 133px;
+
+}
+
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4:nth-child(3) > .wrap-col > .box-item > .zoom-container {
+    background-image: url("../images/kids4-thumb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 133px;
+}
+
+.content-box.boxstyle-2.box-3 > .threegrid > .row > .row > .col-1-4:nth-child(4) > .wrap-col > .box-item > .zoom-container {
+    background-image: url("../images/kids1-thumb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 133px;
+}
+
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 400px;
+    width: 90%;
+    background-image: url("../images/action-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row > .row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 350px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 200px 100px 50px;
+}
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row > .row > img {
+    height: 150px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row > .row > p:first-of-type {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    color: grey;
+}
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row > .row > p:last-of-type {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    color: grey;
+}
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row > .row > h3 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.content-box.boxstyle-3.box-5 > .threegrid > .row > .row > h3 > span {
+
+    color: dodgerblue;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.content-box.box-6 > .threegrid > .row{
+    height: 700px;
+}
+
+.content-box.box-6 > .threegrid > .row > .row{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 350px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-2-3{
+    grid-column: 1 / 2;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-2-3 > .row.post > .col-1-2 > .wrap-col > div > a > img{
+    height: 180px;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-1-3{
+    grid-column: 2 / 3;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-2-3 > .row.extra > .col-1-3:nth-child(1) > .col-ful > .wrap-col > a > img {
+    height: 100px;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-2-3 > .row.extra > .col-1-3:nth-child(2) > .col-ful > .wrap-col > a > img {
+    height: 100px;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-2-3 > .row.extra > .col-1-3:nth-child(3) > .col-ful > .wrap-col > a > img {
+    height: 100px;
+}
+
+.content-box.box-6 > .threegrid > .row > .row > .col-2-3 > .row.extra{
+    display: flex;
+}
+footer{
+    background-color: #333333;
+    color: white;
+}

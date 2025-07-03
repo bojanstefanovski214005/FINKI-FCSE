@@ -7,5 +7,11 @@ A collection of materials from FINKI-FCSE.
 
 | Предмет                                   | Линк   | Проект (Доколку има)                                  |
 |-------------------------------------------|--------|--------------------------------------------------------|
-| Алгоритми и податочни структури          | [GitHub](#) |                                                        |
-| Бази на податоци                | [GitHub](#) |                                                        |
+| Алгоритми и податочни структури          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/APS) |                                                        |
+| Бази на податоци                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/BNP) |                                                        |
+| Структурно програмирање          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/SP) |                                                        |
+| Програмирање на видео игри               | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/PNVI/Labs) |                                                        |
+| Алгоритми и податочни структури          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/APS) |                                                        |
+| Бази на податоци                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/BNP) |                                                        |
+| Алгоритми и податочни структури          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/APS) |                                                        |
+| Бази на податоци                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/BNP) |                                                        |

@@ -14,7 +14,7 @@ A collection of materials from FINKI-FCSE.
 | Основи на Веб дизајн         | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/ONVD) |                                                        |
 | Објектно-ориентирано програмирање                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/OOP) |                                                        |
 | Неструктурирани бази на податоци          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/NBNP) |                                                        |
-| Мобилни информациски системи                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/MIS) | [React Native + Firebase App](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/MIS/ProektnaZadaca)                                                       |
+| Мобилни информациски системи                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/MIS) | [React Native + Firebase App (ReadoBooks App)](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/MIS/ProektnaZadaca)                                                       |
 | Компјутерски мрежи и безбедност          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/KMB) |                                                        |
 | Интернет програмирање на клиентска страна               | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/IPNKS) |                                                        |
 | Електронска и мобилна трговија         | [GitHub](https://github.com/bojanstefanovski214005) |                                                        |

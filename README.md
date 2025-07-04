@@ -5,7 +5,7 @@ A collection of materials from FINKI-FCSE.
 
 ### Листа на предмети
 
-| Предмет                                   | Линк   | Проект (Доколку има)                                  |
+| Предмет                                   | Линк   | Проект                                 |
 |-------------------------------------------|--------|--------------------------------------------------------|
 | Алгоритми и податочни структури          | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/APS) |                                                        |
 | Бази на податоци                | [GitHub](https://github.com/bojanstefanovski214005/FINKI-FCSE/tree/main/BNP) |                                                        |
